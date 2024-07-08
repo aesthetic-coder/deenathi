@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deenathi Thinakaran</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="./img/cat.png" type="image/x-icon">
+    <style>
+      body {
+        background-color: #dfdfef;
+        font-family: "Courier New", Courier, monospace;
+        padding: 20px;
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+        background-image: url(./img/bg1.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+      }
+      .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .box {
+        text-align: center;
+        background-color: #ffffff;
+        border: 2px solid #aaa;
+        width: 300px;
+        margin-left: 10%;
+        margin-top: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        position: absolute;
+        cursor: move;
+      }
+      #box1 {
+        top: 20px;
+        left: -80px;
+      }
+      #box2 {
+        top: 40%;
+        left: 320px;
+        width: 400px;
+      }
+      #box3 {
+        top: 60px;
+        left: 800px;
+      }
+      .cat img{
+        width: 50px;
+        height: 50px;
+        margin-left: 150px;
+      }
+
+      .header {
+        background-color: #4d944a;
+        color: #fff;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: move;
+      }
+      .header-buttons {
+        display: flex;
+        gap: 5px;
+      }
+      .header-button {
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .header-button.minimize {
+        background-color: #ffcc00;
+      }
+      .header-button.maximize {
+        background-color: #00cc00;
+      }
+      .header-button.close {
+        background-color: #ff0000;
+      }
+      .date {
+        font-size: 10px;
+        color: #666;
+        padding: 5px 10px;
+      }
+      .title {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px;
+      }
+      .subtitle {
+        font-size: 15px;
+        color: #666;
+        margin: 0 10px 10px;
+      }
+      /* .image {
+            width: 100%;
+            height: 100px;
+            background-color: #eee;
+            background-image: url('pixel_art.png');     
+            background-size: cover;
+            background-position: center;
+        } */
+      .content {
+        font-size: 15px;
+        padding: 10px;
+        color: #333;
+      }
+
+      img {
+        width: 300px;
+        height: 300px;      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="box1">
+        <div class="header">
+          <div></div>
+          <div class="header-buttons">
+            <div class="header-button minimize"></div>
+            <div class="header-button maximize"></div>
+            <div class="header-button close"></div>
+          </div>
+        </div>
+        <img src="./img/img.png" alt="" />
+        <div class="title">Deenathi Thinakaran</div>
+        <div class="subtitle">Student</div>
+        <br />
+        <!-- <div class="image"></div> -->
+      </div>
+      <div class="box" id="box2">
+        <div class="header">
+          <div></div>
+          <div class="header-buttons">
+            <div class="header-button minimize"></div>
+            <div class="header-button maximize"></div>
+            <div class="header-button close"></div>
+          </div>
+        </div>
+        <div class="date"></div>
+        <div class="title">About Me</div>
+        <!-- <div class="subtitle">Your life, only checkboxier.</div> -->
+        <!-- <div class="image"></div> -->
+        <div class="content">
+          I am Deenathi Thinakaran, currently a Grade 12 student at Credence
+          High School, aged 16. Over the years, I have cultivated strong
+          leadership and communication skills. I am deeply passionate about
+          contributing to the medical field to serve and support others. My
+          extracurricular activities include public speaking, singing, and
+          dancing.
+        </div>
+        <div class="cat">
+            <img src="./img/cat.png" alt="">
+        </div>
+      </div>
+      <div class="box" id="box3">
+        <div class="header">
+          <div></div>
+          <div class="header-buttons">
+            <div class="header-button minimize"></div>
+            <div class="header-button maximize"></div>
+            <div class="header-button close"></div>
+          </div>
+        </div>
+        <div class="date"></div>
+        <div class="title">My Achievements</div>
+        <!-- <div class="subtitle">Your life, only checkboxier.</div> -->
+        <div class="image"></div>
+        <button id="openPdfButton" class="button-24" role="button">
+          Open PDF
+        </button>
+
+        <div id="pdfModal" class="modal">
+          <div class="modal-content">
+            <a href="./style.html"> <span class="close">&times;</span></a>
+            <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+          </div>
+        </div>
+
+        <br />
+        <br />
+        <div class="title">My CV</div>
+        <button id="openPdfButton1" class="button-24" role="button">
+          Open PDF
+        </button>
+
+        <div id="pdfModal1" class="modal">
+          <div class="modal-content">
+            <a href="./style.html"> <span class="close1">&times;</span></a>
+            <iframe id="pdfFrame1" src="" frameborder="0"></iframe>
+          </div>
+        </div>
+
+        <br /><br /><br />
+
+        <!-- <div class="content">
+          If you’ve been on the internet as long as I have, then you’ve checked
+          your fair share of checkboxes, usually when agreeing to some unread
+          terms and conditions. Bryan Braun’s latest project, CheckBoxLand
+          repurposes these little blue ticks into an array of pixels for all
+          your rendering needs.
+        </div> -->
+      </div>
+    </div>
+
+    <script>
+      function makeDraggable(element) {
+        let isMouseDown = false;
+        let offset = [0, 0];
+
+        element.addEventListener(
+          "mousedown",
+          function (e) {
+            isMouseDown = true;
+            offset = [
+              element.offsetLeft - e.clientX,
+              element.offsetTop - e.clientY,
+            ];
+            element.style.zIndex = 1000; // Ensure the element is on top while dragging
+          },
+          true
+        );
+
+        document.addEventListener(
+          "mouseup",
+          function () {
+            isMouseDown = false;
+          },
+          true
+        );
+
+        document.addEventListener(
+          "mousemove",
+          function (event) {
+            event.preventDefault();
+            if (isMouseDown) {
+              let mousePosition = {
+                x: event.clientX,
+                y: event.clientY,
+              };
+              let newX = mousePosition.x + offset[0];
+              let newY = mousePosition.y + offset[1];
+
+              // Ensure the box stays within the screen
+              if (newX < 0) newX = 0;
+              if (newY < 0) newY = 0;
+              if (newX + element.clientWidth > window.innerWidth)
+                newX = window.innerWidth - element.clientWidth;
+              if (newY + element.clientHeight > window.innerHeight)
+                newY = window.innerHeight - element.clientHeight;
+
+              element.style.left = newX + "px";
+              element.style.top = newY + "px";
+            }
+          },
+          true
+        );
+      }
+
+      document.querySelectorAll(".box").forEach(makeDraggable);
+      document.querySelectorAll(".box1").forEach(makeDraggable);
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var modal = document.getElementById("pdfModal");
+        var btn = document.getElementById("openPdfButton");
+        var span = document.querySelector(".close");
+        var pdfFrame = document.getElementById("pdfFrame");
+
+        // Change this to the URL of your PDF file
+        var pdfUrl = "./ach.pdf";
+
+        btn.onclick = function () {
+          pdfFrame.src = pdfUrl;
+          modal.style.display = "block";
+        };
+
+        span.onclick = function () {
+          location.reload();
+        };
+
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            location.reload(); // Reload the page
+          }
+        };
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var modal = document.getElementById("pdfModal1");
+        var btn = document.getElementById("openPdfButton1");
+        var span = document.querySelector(".close1");
+        var pdfFrame = document.getElementById("pdfFrame1");
+
+        // Change this to the URL of your PDF file
+        var pdfUrl = "./cv.pdf";
+
+        btn.onclick = function () {
+          pdfFrame.src = pdfUrl;
+          modal.style.display = "block";
+        };
+
+        span.onclick = function () {
+          location.reload();
+        };
+
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            location.reload(); // Reload the page
+          }
+        };
+      });
+    </script>
+  </body>
+</html>
